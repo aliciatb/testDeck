@@ -49,5 +49,5 @@ print(g + geom_bar(stat='identity') +
 ---
 
 ## Find your Data Scientist dream job at ...
-
 https://alicia.shinyapps.io/jobwordcloud/
+[![Visualize Your Next Job](https://github.com/aliciatb/testDeck/blob/gh-pages/assets/img/screenshot.tiff)](https://alicia.shinyapps.io/jobwordcloud/)

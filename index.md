@@ -40,5 +40,5 @@ wordcloud(words=c('visualize','your','future','job','data'),freq=c(4,2,3,4,5),
 ---
 
 ## Find your Data Scientist dream job at ...
-
 https://alicia.shinyapps.io/jobwordcloud/
+

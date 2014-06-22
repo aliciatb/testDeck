@@ -1,7 +1,7 @@
 ---
-title       : Test deck
-subtitle    : 
-author      : 
+title       : Visualize Your Next Job Deck
+subtitle    : Wordcloud of job description and keyword match % calculation
+author      : Alicia Brown
 job         : 
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
@@ -10,21 +10,35 @@ widgets     : []            # {mathjax, quiz, bootstrap}
 mode        : selfcontained # {standalone, draft}
 ---
 
-## Read-And-Delete
+## About
 
-1. Edit YAML front matter
-2. Write using R Markdown
-3. Use an empty line followed by three dashes to separate slides!
+The shiny app, Visualize Your Next Job, allows users to enter a potential job description and important keywords in order to visually see what desired skills, requirements, and other words show up in the job description as well as seeing how closely it matches keywords the job applicant hopes to find in the job.
 
---- .class #id 
+The wordcloud library generates a text representation of the frequency of terms in  dataset and can be configured to display at minimum frequency level, if so desired by the author.
 
-## Slide 2
+The barplot also matches any keywords entered by the job seeker and calculates the percentage match on the job description.
+
+---
+
+## The word cloud
 
 
 ```r
-plot(1:10, 1:10)
+library(RColorBrewer); library(wordcloud); library(Rcpp); require(Rcpp) 
+wordcloud(words=c('visualize','your','future','job','data'),freq=c(4,2,3,4,5),
+          scale=c(5,.15),min.freq=1,random.order=FALSE,rot.per=.15,
+          colors=brewer.pal(8,"Accent"),vfont=c("serif","plain"))
 ```
 
-![plot of chunk unnamed-chunk-1](assets/fig/unnamed-chunk-1.png) 
+<img src="figure/unnamed-chunk-1.png" title="plot of chunk unnamed-chunk-1" alt="plot of chunk unnamed-chunk-1" style="display: block; margin: auto;" />
 
+---
 
+## The keyword match calculation for keywords "data" and "shiny" on job description terms.
+![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-2.png) 
+
+---
+
+## Find your Data Scientist dream job at ...
+
+https://alicia.shinyapps.io/jobwordcloud/

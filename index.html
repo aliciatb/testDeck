@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Test deck</title>
+  <title>Visualize Your Next Job Deck</title>
   <meta charset="utf-8">
-  <meta name="description" content="Test deck">
-  <meta name="author" content="">
+  <meta name="description" content="Visualize Your Next Job Deck">
+  <meta name="author" content="Alicia Brown">
   <meta name="generator" content="slidify" />
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -32,9 +32,9 @@
     <!-- LOGO SLIDE -->
         <slide class="title-slide segue nobackground">
   <hgroup class="auto-fadein">
-    <h1>Test deck</h1>
-    <h2></h2>
-    <p><br/></p>
+    <h1>Visualize Your Next Job Deck</h1>
+    <h2>Wordcloud of job description and keyword match % calculation</h2>
+    <p>Alicia Brown<br/></p>
   </hgroup>
   <article></article>  
 </slide>
@@ -43,28 +43,53 @@
     <!-- SLIDES -->
     <slide class="" id="slide-1" style="background:;">
   <hgroup>
-    <h2>Read-And-Delete</h2>
+    <h2>About</h2>
   </hgroup>
   <article data-timings="">
-    <ol>
-<li>Edit YAML front matter</li>
-<li>Write using R Markdown</li>
-<li>Use an empty line followed by three dashes to separate slides!</li>
-</ol>
+    <p>The shiny app, Visualize Your Next Job, allows users to enter a potential job description and important keywords in order to visually see what desired skills, requirements, and other words show up in the job description as well as seeing how closely it matches keywords the job applicant hopes to find in the job.</p>
+
+<p>The wordcloud library generates a text representation of the frequency of terms in  dataset and can be configured to display at minimum frequency level, if so desired by the author.</p>
+
+<p>The barplot also matches any keywords entered by the job seeker and calculates the percentage match on the job description.</p>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="class" id="id" style="background:;">
+<slide class="" id="slide-2" style="background:;">
   <hgroup>
-    <h2>Slide 2</h2>
+    <h2>The word cloud</h2>
   </hgroup>
   <article data-timings="">
-    <pre><code class="r">plot(1:10, 1:10)
+    <pre><code class="r">library(RColorBrewer); library(wordcloud); library(Rcpp); require(Rcpp) 
+wordcloud(words=c(&#39;visualize&#39;,&#39;your&#39;,&#39;future&#39;,&#39;job&#39;,&#39;data&#39;),freq=c(4,2,3,4,5),
+          scale=c(5,.15),min.freq=1,random.order=FALSE,rot.per=.15,
+          colors=brewer.pal(8,&quot;Accent&quot;),vfont=c(&quot;serif&quot;,&quot;plain&quot;))
 </code></pre>
 
-<p><img src="assets/fig/unnamed-chunk-1.png" alt="plot of chunk unnamed-chunk-1"> </p>
+<p><img src="figure/unnamed-chunk-1.png" title="plot of chunk unnamed-chunk-1" alt="plot of chunk unnamed-chunk-1" style="display: block; margin: auto;" /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>The keyword match calculation for keywords &quot;data&quot; and &quot;shiny&quot; on job description terms.</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="figure/unnamed-chunk-2.png" alt="plot of chunk unnamed-chunk-2"> </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Find your Data Scientist dream job at ...</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><a href="https://alicia.shinyapps.io/jobwordcloud/">https://alicia.shinyapps.io/jobwordcloud/</a></p>
 
   </article>
   <!-- Presenter Notes -->
@@ -76,14 +101,26 @@
     <ul>
       <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=1 title='Read-And-Delete'>
+        data-slide=1 title='About'>
          1
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=2 title='Slide 2'>
+        data-slide=2 title='The word cloud'>
          2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='The keyword match calculation for keywords &quot;data&quot; and &quot;shiny&quot; on job description terms.'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Find your Data Scientist dream job at ...'>
+         4
       </a>
     </li>
   </ul>

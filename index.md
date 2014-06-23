@@ -1,8 +1,8 @@
 ---
-title       : Visualize Your Next Job Deck
-subtitle    : Wordcloud of job description and keyword match % calculation
+title       : Visualize Your Next Job Application
+subtitle    : Word cloud of Job Description and Keyword Match % Calculation
 author      : Alicia Brown
-job         : 
+job         : Data Science Student, Johns Hopkins University, Coursera.org
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
@@ -40,5 +40,7 @@ wordcloud(words=c('visualize','your','future','job','data'),freq=c(4,2,3,4,5),
 ---
 
 ## Find your Data Scientist dream job at ...
-https://alicia.shinyapps.io/jobwordcloud/
 
+[https://alicia.shinyapps.io/jobwordcloud/](https://alicia.shinyapps.io/jobwordcloud/)
+
+<img src="assets/img/jobwordcloud.jpg" height=400 align="center">
